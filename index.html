@@ -3,130 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earn Money Online</title>
+    <title>Make Money Online</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
         body {
+            font-family: Arial, sans-serif;
             background: url("YOUR_IMAGE_URL_HERE") no-repeat center center fixed;
             background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: white;
             text-align: center;
-            overflow: hidden;
+            padding: 20px;
         }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 1;
-        }
-
         .container {
-            position: relative;
-            z-index: 2;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            max-width: 450px;
-            animation: fadeIn 1.5s ease-in-out;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
         h1 {
-            color: #333;
-            font-size: 28px;
-            margin-bottom: 10px;
+            color: black;
         }
-
         h2 {
-            color: #28a745;
-            font-size: 22px;
-            margin-bottom: 15px;
+            color: green;
         }
-
-        p {
-            color: #444;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .highlight {
+        .audit {
             color: red;
             font-weight: bold;
         }
-
+        .info, .change, .earn {
+            color: black;
+        }
+        .whatsapp-button, .contact-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .whatsapp-button:hover, .contact-button:hover {
+            background: darkgreen;
+        }
         .countdown {
             font-size: 18px;
-            font-weight: bold;
             color: red;
-            display: none;
-            margin-top: 15px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 25px;
-            font-size: 18px;
             font-weight: bold;
-            text-decoration: none;
-            color: white;
-            background: linear-gradient(45deg, #28a745, #218838);
-            border-radius: 8px;
-            transition: transform 0.3s, background 0.3s;
-            cursor: pointer;
-            margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
         }
-
-        .button:hover {
-            background: linear-gradient(45deg, #218838, #1e7e34);
-            transform: scale(1.05);
-        }
-
-        #contactButton {
+        .contact-button {
             display: none;
         }
     </style>
 </head>
 <body>
-
-    <div class="overlay"></div>
-
     <div class="container">
-        <h1>💰 Make Money Online 💰</h1>
-        <h2>घर बैठे पैसे कमाने का सुनहरा मौका!</h2>
-        <p class="highlight">✔ 500,000+ भारतीय इस प्लेटफॉर्म से कमा रहे हैं</p>
-        <p>अगर आप गरीबी से छुटकारा पाना चाहते हैं, तो यह मौका आपके लिए है!</p>
-        <p><b>₹500 - ₹3000</b> प्रति दिन कमाने का अवसर!</p>
+        <h1>Make money online:</h1>
+        <h2>Anyone can make money from home.</h2>
+        <p class="audit">This project has passed the audit of our professional department to ensure the safety and reliability of the project.</p>
+        <p class="info">Over 500,000 Indian friends join us to improve their family life with new ways to make money online. If you are under 25, you cannot join this program!</p>
+        <p class="change">If you want to change your current state of poverty, you can learn the secrets of others' success and become rich.</p>
+        <p class="earn">Everyone can earn 500-3000 RS per day.</p>
         
-        <button class="button" onclick="startCountdown()">📲 Chat on WhatsApp</button>
+        <!-- पहला बटन जो काउंटडाउन शुरू करेगा -->
+        <button class="whatsapp-button" onclick="startCountdown()">Chat on WhatsApp</button>
         
-        <p class="countdown" id="countdown">Redirecting in <span id="timer">30</span> seconds...</p>
+        <!-- काउंटडाउन -->
+        <p class="countdown" id="countdown" style="display:none;">Redirecting in <span id="timer">30</span> seconds...</p>
 
-        <a id="contactButton" class="button" href="https://wa.me/919876543210" target="_blank">📞 Contact Now</a>
+        <!-- असली Contact Now बटन जो WhatsApp पर भेजेगा -->
+        <a id="contactButton" class="contact-button" href="https://wa.me/919876543210" target="_blank">Contact Now</a>
     </div>
 
     <script>
         function startCountdown() {
-            document.querySelector(".button").style.display = "none";
+            document.querySelector(".whatsapp-button").style.display = "none";
             document.getElementById("countdown").style.display = "block";
             
             let timeLeft = 30;
@@ -144,6 +97,5 @@
             }, 1000);
         }
     </script>
-
 </body>
 </html>
